@@ -388,6 +388,7 @@ else {
 	else {
 		$output = $pdoFetch->getChunk($scriptProperties['tplOuter'], $output, $fastMode);
 		$output .= $log;
+		$modx->setPlaceholder('filterRowCounts', $count );
 
 		return $output;
 	}
